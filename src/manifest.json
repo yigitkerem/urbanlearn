@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "UrbanLearn",
+  "version": "1.0",
+  "description": "A modern, sleek dark theme for PrairieLearn.",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.prairielearn.com/*",
+        "*://*.prairielearn.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles.css"
+      ],
+      "matches": [
+        "*://*.prairielearn.com/*",
+        "*://*.prairielearn.org/*"
+      ]
+    }
+  ]
+}

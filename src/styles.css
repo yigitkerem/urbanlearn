@@ -1,0 +1,388 @@
+/* Inject Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-primary: #0f1014;
+  --bg-secondary: #1a1b22;
+  --bg-tertiary: #2a2b34;
+  --text-primary: #e6e6e6;
+  --text-secondary: #a3a3a3;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-radius: 8px;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --accent-bg: rgba(255, 255, 255, 0.95);
+  --accent-text: #111111;
+  
+  --hover-border: rgba(255, 255, 255, 0.3);
+  --hover-bg: #21222b;
+  --hover-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  
+  --success-bg: rgba(76, 175, 80, 0.15);
+  --success-text: #81c784;
+  --success-border: rgba(76, 175, 80, 0.3);
+  --warning-bg: rgba(255, 193, 7, 0.15);
+  --warning-text: #ffd54f;
+  --warning-border: rgba(255, 193, 7, 0.3);
+  --muted-badge-bg: rgba(255, 255, 255, 0.05);
+  --muted-badge-border: rgba(255, 255, 255, 0.1);
+  --progress-green: #4CAF50;
+  --progress-yellow: #FFC107;
+
+  --nav-btn-hover: #383a45;
+  --nav-btn-border: rgba(255,255,255,0.6);
+  --btn-light-hover: rgba(255,255,255,0.1);
+  
+  --block-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  
+  /* Bootstrap overrides */
+  --bs-body-bg: var(--bg-primary);
+  --bs-body-color: var(--text-primary);
+  --bs-light: var(--bg-secondary);
+  --bs-dark: var(--bg-primary);
+  --bs-border-color: var(--border-color);
+  --bs-font-sans-serif: var(--font-family);
+}
+
+html.light-theme {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border-color: rgba(0, 0, 0, 0.1);
+  
+  --accent-bg: #111827;
+  --accent-text: #ffffff;
+
+  --hover-border: rgba(0, 0, 0, 0.2);
+  --hover-bg: #ffffff;
+  --hover-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --success-text: #059669;
+  --success-border: rgba(16, 185, 129, 0.3);
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --warning-text: #d97706;
+  --warning-border: rgba(245, 158, 11, 0.3);
+  --muted-badge-bg: rgba(0, 0, 0, 0.05);
+  --muted-badge-border: rgba(0, 0, 0, 0.1);
+  --progress-green: #10b981;
+  --progress-yellow: #f59e0b;
+  
+  --nav-btn-hover: #e5e7eb;
+  --nav-btn-border: #9ca3af;
+  --btn-light-hover: rgba(0,0,0,0.05);
+
+  --block-shadow: 0 12px 36px rgba(0,0,0,0.06);
+}
+
+html.light-theme .text-white {
+  color: var(--text-primary) !important;
+}
+html.light-theme .text-dark {
+  color: #fff !important;
+}
+
+.urban-card-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.urban-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--hover-border) !important;
+  background-color: var(--hover-bg) !important;
+  box-shadow: var(--hover-shadow) !important;
+}
+
+html.light-theme .question-body img, 
+html.light-theme pl-question-panel img, 
+html.light-theme pl-answer-panel img, 
+html.light-theme pl-submission-panel img {
+  filter: none !important;
+}
+
+
+/* Global Reset */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-family) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bootstrap Container & Card Resets */
+.bg-light { background-color: var(--bg-secondary) !important; }
+.bg-dark { background-color: var(--bg-primary) !important; }
+.bg-white { background-color: var(--bg-secondary) !important; color: var(--text-primary) !important; }
+
+.card {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--text-primary) !important;
+}
+
+.question-block, .grading-block, [data-testid="submission-block"], .submission-block {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  box-shadow: var(--block-shadow) !important;
+  width: 100%;
+  margin-bottom: 2rem !important;
+}
+
+.card-header, .card-footer {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--text-primary) !important;
+}
+
+.border { border-color: var(--border-color) !important; }
+.border-bottom, .border-top, .border-left, .border-right {
+  border-color: var(--border-color) !important;
+}
+
+/* Navbar */
+.navbar, .navbar-dark, .app-top-nav, .bg-dark, .navbar.bg-dark {
+  background-color: var(--bg-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+.navbar-brand, .nav-link, .navbar-brand * { color: var(--text-primary) !important; }
+
+/* Tables */
+table, .table {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+.table td, .table th, .table thead th {
+  border-color: var(--border-color) !important;
+  background-color: transparent !important;
+}
+
+/* Forms */
+.form-control, .form-select, input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="hidden"]), textarea, select {
+  background-color: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 8px 12px;
+  outline: none !important;
+}
+.form-control:focus, .form-select:focus, input:not([type="radio"]):not([type="checkbox"]):focus, textarea:focus, select:focus {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--hover-border) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: var(--text-primary) !important;
+}
+
+/* Input Groups */
+.input-group .form-control {
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+}
+.input-group .input-group-text {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-left: none !important;
+  color: var(--text-secondary) !important;
+  font-weight: 600;
+  border-radius: 0 !important;
+}
+.input-group .btn {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-left: none !important;
+  color: var(--text-secondary) !important;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+}
+.input-group .input-group-text:last-child {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+}
+
+/* Radios & Checkboxes */
+input[type="radio"], input[type="checkbox"] {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.4em;
+  height: 1.4em;
+  outline: none !important;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+input[type="checkbox"] {
+  border-radius: 6px;
+}
+
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+  background-color: var(--accent-bg) !important;
+  border-color: var(--accent-bg) !important;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5em; height: 0.5em;
+  border-radius: 50%;
+  background-color: var(--accent-text);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 45%; left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 0.35em; height: 0.65em;
+  border: solid var(--accent-text);
+  border-width: 0 2px 2px 0;
+}
+
+/* Buttons */
+.btn {
+  border-radius: var(--border-radius) !important;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.2s ease !important;
+}
+.btn.rounded-pill {
+  border-radius: 50rem !important;
+}
+.btn.rounded-circle {
+  border-radius: 50% !important;
+}
+.btn:hover {
+  background-color: #383a45 !important;
+  border-color: #555 !important;
+  color: #fff !important;
+}
+.btn-primary {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+}
+.btn-primary:hover {
+  background-color: #e0e0e0 !important;
+  color: #000000 !important;
+}
+
+/* Custom Action Buttons */
+.urban-btn-primary {
+  background-color: var(--accent-bg) !important;
+  color: var(--accent-text) !important;
+  border: 1px solid var(--accent-bg) !important;
+}
+.urban-btn-primary:hover {
+  opacity: 0.8 !important;
+  transform: translateY(-1px);
+}
+
+.urban-btn-secondary {
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+.urban-btn-secondary:hover {
+  background-color: var(--btn-light-hover) !important;
+  border: 1px solid var(--nav-btn-border) !important;
+}
+
+/* Question Centering */
+#content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+}
+
+/* Target specific generic columns */
+.container {
+  max-width: 100% !important; 
+}
+
+/* Target PL panels specifically */
+pl-question-panel, pl-submission-panel, pl-answer-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Markdown prose inside PL */
+.markdown-body {
+  color: var(--text-primary) !important;
+}
+
+/* Attempts Pill Styles */
+.attempt-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.attempt-badge:hover {
+  background-color: #3a3b45;
+  color: #fff;
+}
+
+.attempt-badge.active {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Custom buttons */
+.question-nav-btn {
+  width: 50px !important;
+  height: 50px !important;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-secondary) !important;
+  transition: all 0.2s ease !important;
+  color: var(--text-primary) !important;
+}
+
+.question-nav-btn:hover {
+  background-color: var(--nav-btn-hover) !important;
+  border-color: var(--nav-btn-border) !important;
+}
+
+.question-save:hover {
+  background-color: var(--btn-light-hover) !important;
+}
+
+/* Fix Images (inverts black lines on white bgs) */
+.question-body img, pl-question-panel img, pl-answer-panel img, pl-submission-panel img {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) !important;
+  border-radius: 4px !important;
+}
+
+/* Force Text Elements to be readable */
+.question-body p, 
+.question-body span, 
+.question-body div, 
+.question-body li {
+  color: inherit !important;
+}
+.question-body {
+  color: var(--text-primary) !important;
+}

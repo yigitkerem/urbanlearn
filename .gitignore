@@ -1,0 +1,6 @@
+# Ignore scraping dumps
+dom_dump.html
+dom_dump.css
+
+# System files
+.DS_Store
